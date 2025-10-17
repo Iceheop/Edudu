@@ -1,0 +1,27 @@
+---
+import Button from '../ui/Button.astro';
+import LightBulb from '../../assets/light-bulb.svg';
+import HeroImage from '../../assets/hero-image.png';
+---
+
+<header id="header" class="bg-gradient py-5"> 
+    <section class="container">
+        <section class="row">
+            <section class="col-12 col-md-7 col-lg-7">
+                <img src={LightBulb.src} alt="light bulb icon" class="mb-2"/>
+                <h1>Knowledge Connection <br> <strong>Open the Door to the Future</strong></h1>
+                <p class="mb-4">Giving every student the opportunity to access the best education and open the door to the world of knowledge. Start your learning journey today with Edudu to become an outstanding student in our learning community.</p>
+                <Button title="Get Started!"/>
+            </section>
+            <section class="col-12 col-md-5 col-lg-5">
+                <img src={HeroImage.src} alt="hero image" class="img-fluid"/>
+            </section>
+        </section>
+    </section>
+</header>
+
+<style>
+    .bg-gradient {
+        background: linear-gradient(90deg, #fab70046 0%, transparent 100%) !important;
+    }
+</style>

@@ -1,0 +1,40 @@
+---
+import Logo from '../../assets/bee.svg';
+---
+<nav class="py-4">
+    <section class="container d-flex justify-content-between align-items-center">
+        <a href="#" class="d-flex align-items-center gap-3">
+            <img src={Logo.src} alt="Edudu Logo" class="img-fluid m-0">
+            <span class="fs-2 fw-bold">Edudu</span>
+        </a>
+        <ul class="d-flex flex-row gap-5">
+            <li class="fw-medium"><a href="#">Course</a></li>
+            <li class="fw-medium"><a href="#">Teacher</a></li>
+            <li class="fw-medium"><a href="#">How to use</a></li>
+            <li class="fw-medium"><a href="#">About Us</a></li>
+        </ul>
+        <section class="d-flex align-items-center gap-3">
+            <a href="#">Sign up</a>
+            <a href="#" class="btn px-4 py-2 rounded-4">Log in</a>
+        </section>
+    </section>
+</nav>
+
+<style>
+    nav {
+        background-color: var(--color-white);
+    }
+    img {
+        height: 50px;
+        margin-right: 50px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .btn {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+    }
+</style>

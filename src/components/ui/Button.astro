@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string,
+}
+const { title } = Astro.props;
+---
+<button class="btn px-5 py-2 rounded-4 fw-medium">{title}</button>
+
+<style>
+    .btn {
+        background-color: var(--color-brand);
+        font-size: var(--font-size-xs);
+        color: var(--color-text);
+    }
+</style>
