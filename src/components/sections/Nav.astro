@@ -1,40 +1,55 @@
 ---
 import Logo from '../../assets/bee.svg';
 ---
-<nav class="py-4 animate-on-load animate-delay-1">
-    <section class="container d-flex justify-content-between align-items-center">
-        <a href="#" class="d-flex align-items-center gap-3">
-            <img src={Logo.src} alt="Edudu Logo" class="img-fluid m-0">
-            <span class="fs-2 fw-bold">Edudu</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 animate-on-load animate-delay-1">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+            <img src={Logo.src} alt="Edudu Logo" class="img-fluid m-0 nav-logo">
+            <span class="fs-4 fw-bold m-0">Edudu</span>
         </a>
-        <ul class="d-flex flex-row gap-5">
-            <li class="fw-medium"><a href="#">Course</a></li>
-            <li class="fw-medium"><a href="#">Teacher</a></li>
-            <li class="fw-medium"><a href="#">How to use</a></li>
-            <li class="fw-medium"><a href="#">About Us</a></li>
-        </ul>
-        <section class="d-flex align-items-center gap-3">
-            <a href="#">Sign up</a>
-            <a href="#" class="btn px-4 py-2 rounded-4">Log in</a>
-        </section>
-    </section>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navCollapse"
+            aria-controls="navCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navCollapse">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link fw-medium" href="#">Course</a></li>
+                <li class="nav-item"><a class="nav-link fw-medium" href="#">Teacher</a></li>
+                <li class="nav-item"><a class="nav-link fw-medium" href="#">How to use</a></li>
+                <li class="nav-item"><a class="nav-link fw-medium" href="#">About Us</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3">
+                <a class="nav-link px-0" href="#">Sign up</a>
+                <a class="btn btn-accent px-4 py-2 rounded-4" href="#">Log in</a>
+            </div>
+        </div>
+    </div>
 </nav>
 
 <style>
-    nav {
+    :global(.navbar) {
         background-color: var(--color-white);
     }
-    img {
+    .nav-logo {
         height: 50px;
-        margin-right: 50px;
     }
-    ul {
+    /* reset list styling if needed */
+    :global(.navbar-nav) {
         list-style: none;
-        margin: 0;
-        padding: 0;
     }
-    .btn {
+    .btn-accent {
         background-color: var(--color-accent);
         color: var(--color-white);
+        border: none;
     }
 </style>
