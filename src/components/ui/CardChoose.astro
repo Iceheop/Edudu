@@ -1,0 +1,27 @@
+---
+interface Props {
+    title: string,
+    description: string,
+    image: ImageMetadata
+}
+const { title, description, image } = Astro.props;
+---
+
+<article class="d-flex flex-column align-items-center bg-white rounded-4 py-4 px-4 shadow-sm">
+    <img src={image.src} alt="image" class="img-fluid mb-3" />
+    <header class="text-center">
+        <h3 class="m-0 fw-bold mb-3 fs-5">{title}</h3>
+        <p class="fs-5">{description}</p>
+    </header>
+</article>
+
+<style>
+    article {
+        width: 350px;
+        min-height: 375px;
+        height: 100%;
+    }
+    .img-fluid {
+        height: 100px !important;
+    }
+</style>

@@ -1,0 +1,22 @@
+---
+import Button from "../ui/Button.astro"
+import VideoCall from "../../assets/video-calls.png"
+import Badge from "../ui/Badge.astro"
+---
+<section id="class" class="py-5 my-5">
+    <section class="container">
+        <header class="d-flex justify-content-center align-items-center flex-column text-center mb-5 pb-3">
+            <h2 class="fw-bold mb-3">What's in the class at Edudu?</h2>
+            <p class="col-12 col-md-9 col-lg-9 mb-5">Online classes with teachers, continuous questions and answers during class if you do not understand. At the end of the session, the lesson is recorded for your child to review</p>
+            <Button title="Free trial lesson"/>
+        </header>
+        <section>
+            <img src={VideoCall.src} alt="Video Call" class="img-fluid" />
+            <section class="d-flex flex-wrap justify-content-center align-items-center gap-5">
+                <Badge title="Math" icon="bi-grid" color="primary" />
+                <Badge title="Literature" icon="bi-book-fill" color="warning" />
+                <Badge title="English" icon="bi-translate" color="danger" />
+            </section>
+        </section>
+    </section>
+</section>
